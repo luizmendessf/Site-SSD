@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate BP - Cronômetro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu-fixo">
+        <a href="index.html"><img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu"></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Retornar à página inicial</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<div id="simulador">
+    <h1 class="titulosim">Debate BP - Cronômetro</h1>
+
+    <button onclick="pickMotion()" class="sortear">Sortear Moção</button>
+    <p id="motion"></p>
+    <h2 id="stage"></h2>
+    <p id="timer" class="timer"></p>
+    <div class="controls">
+        <button onclick="startStop()" id="startBtn">Iniciar</button>
+        <button onclick="reset()">Reiniciar</button>
+        <button onclick="skipStage()">Pular Tempo</button>
+    </div>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
