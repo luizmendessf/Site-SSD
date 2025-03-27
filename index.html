@@ -8,37 +8,74 @@
 </head>
 <body>
 
+  <script src="script.js"></script>
+
+
+  
   <header id="menu-fixo">
-    <a href="#logo"><img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu"></a>
+    <a href="#logo">
+      <img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu">
+    </a>
+    <button class="menu-toggle">☰</button> <!-- Botão de menu -->
     <nav>
       <ul>
-        <li><a href="#Assd">A SSD</a></li>
-        <li><a href="#Universidades">Universidades</a></li>
-        <li><a href="#nossa-história">Nossa História</a></li>
-        <li><a href="#conquistas">Quero fazer história</a></li>
+        <li><a href="#logo">Início</a></li>
+        <li><a href="conquistas.html">Conquistas</a></li>
+        <li><a href="Modelo.html">Modelo BP</a></li>
+        <li><a href="entrevistas.html">Entrevistas</a></li>
         <li><a href="simulador.html">Simulador</a></li>
-       </ul>
+        <li><a href="calculadora.html">Calculadora</a></li>
+      </ul>
     </nav>
   </header>
   
   
-
   <main>
   <section id="logo">
     <h1>Sociedade Sergipana de Debates</h1>
-    <img src="imagens/SSD-removebg-preview.png" alt="logo ssd" >
+    <picture>
+      <source media="(max-width: 750px)" srcset="imagens/SSD-p-removebg-preview.png" type="image/png">
+      <img src="imagens/SSD-removebg-preview.png" alt="logo ssd" ></picture>
   </div>
   <div class="redes">
-    <a href="instagram.com/ssdebates"><img src="imagens/instagram-dark-blue-outline-22721.png" alt="instagram" class="instagram"></a>
+    <a href="instagram.com/ssdebates"><picture>
+      <source media="(max-width: 750px)" srcset="imagens/instagram-p-dark-blue-outline-22721.png" type="image/png">
+      <img src="imagens/instagram-dark-blue-outline-22721.png" alt="instagram" class="instagram">
+    </picture></a>
 
-    <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/about/"><img src="imagens/linkedin.png" alt="linkedin"><a>
+    <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/about/"><picture>
+      <source media="(max-width: 750px)" srcset="imagens/linkedin-p.png" type="image/png">
+      <img src="imagens/linkedin.png" alt="linkedin">
+    </picture></a>
   </div>
+
+
+  <section id="ferramentas">
+    <h1 class="aproveite">Aproveite nossas ferramentas</h1>
+    <div class="container-ferr">
+      <div class="boxferr">
+        <div class="imgferr"><img src="imagens/icone-de-debate_946691-2949.png"><h2>Simulador de Debates</h2></div>
+        <p class="pcenter">Gere moções aleatórias e pratique o debate competitivo BP com os timers pré-configurados.</p>
+        <a href="simulador.html">
+          <div class="botao-ferr"><p class="acesseferr">Acesse a ferramenta</p></div>
+        </a>
+      </div>
+        
+      <div class="boxferr">
+        <div class="imgferr"><img src="imagens/icone-de-debate_946691-2949.png"><h2>Calculadora de Break</h2></div>
+        <p class="pcenter">Calcule cenários de classificação para o break com base em pontos e rankings de equipes.</p>
+        <a href="calculadora.html">
+          <div class="botao-ferr"><p class="acesseferr">Acesse a ferramenta</p></div>
+        </a>
+      </div>
+    </div>
+  </section> 
 
   <section id="Assd" class="hero">
     <div class="texto-assd">
       <h1>A Sociedade Sergipana de Debates</h1>
       <p>Nasce com o propósito de cultivar uma sociedade mais reflexiva, participativa e aberta ao diálogo. Como uma organização sem fins lucrativos, dedicamo-nos a promover o debate como uma ferramenta poderosa para o desenvolvimento de lideranças, o fortalecimento do pensamento crítico e a construção de um futuro mais inclusivo e democrático.
-        <br><br></p> Inspirados pelos valores de respeito, empatia, diversidade e excelência, buscamos incentivar a troca de ideias que vai além das diferenças, criando um espaço onde opiniões podem ser compartilhadas e desafiadas de forma construtiva.
+        <br><br> Inspirados pelos valores de respeito, empatia, diversidade e excelência, buscamos incentivar a troca de ideias que vai além das diferenças, criando um espaço onde opiniões podem ser compartilhadas e desafiadas de forma construtiva.
        Nosso objetivo é formar cidadãos capazes de compreender os desafios do mundo contemporâneo, agir com responsabilidade e liderar com visão e propósito.
        <br><br><p>Por meio de eventos, capacitações e iniciativas que estimulam o diálogo e a argumentação, queremos transformar Sergipe em um estado onde a cultura do debate seja reconhecida como um pilar essencial para a evolução da sociedade e para a consolidação de uma convivência mais harmoniosa e democrática.
         </p>
@@ -88,19 +125,58 @@
     
   </section>
 
-  
+  <section id="vejamais">
+    <h1 class="h1vejamais">Veja mais sobre a SSD</h1>
+    <div class="container-veja">
+      <a href="conquistas.html" class="link-card">
+        <div class="conquistas">
+          <h2 class="txtveja">Conquistas</h2>
+        </div>
+      </a>
+      <a href="Modelo.html" class="link-card">
+        <div class="bp">
+          <h2 class="txtveja">Modelo British Parliamentary</h2>
+        </div> 
+      </a> 
+      <a href="entrevistas.html" class="link-card">
+        <div class="entrevistas">
+          <h2 class="txtveja">Entrevistas</h2>
+        </div>
+      </a>
+    </div>
+</section>
 
 
+<footer>
+  <div class="footer-content">
+    <div class="boxpfooter">
+      <div class="traço-underline"></div>
+      <div class="texto-com-icones">
+        <h4 class="pfooter">Quer obter mais informações em tempo real<br>sobre o movimento de debates em Sergipe?</h4>
+          <div class="social-item">
+            <a href="https://instagram.com/ssdebates" target="_blank">
+              <img src="imagens/instagram-branco.png" alt="Instagram">
+            </a>
+            <span>Siga-nos no Instagram</span>
+          </div>
+          <div class="social-item">
+            <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/" target="_blank">
+              <img src="imagens/linkedin-branco.png" alt="Linkedin">
+            </a>
+            <span>Siga-nos no LinkedIn</span>
+          </div>
+          <div class="social-item">
+            <a href="https://www.youtube.com/@SociedadeSergipanadeDebates" target="_blank">
+              <img src="imagens/youtube-branco.png" alt="YouTube">
+            </a>
+            <span>Inscreva-se no YouTube</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-final"><img src="imagens/SSD-removebg-preview-menu.png" alt="logo-ssd"></div>
+  </div>
+</footer>
 </main>
-
-  <footer>
-    
-    <p>&copy; 2025 Sociedade Sergipana de Debates. </p>
-
-    <div class="logo-final"><img src="imagens/SSD-removebg-preview-rodape.png" alt="logo-ssd"></div>
-
-
-  </footer>
-
 </body>
 </html>

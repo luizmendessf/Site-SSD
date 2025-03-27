@@ -7,30 +7,75 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="menu-fixo">
-        <a href="index.html"><img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu"></a>
-        <nav>
-          <ul>
-            <li><a href="index.html">Retornar à página inicial</a></li>
-          </ul>
-        </nav>
-      </header>
 
-<div id="simulador">
+  <header id="menu-fixo">
+    <a href="index.html"><img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="conquistas.html">Conquistas</a></li>
+        <li><a href="Modelo.html">Modelo BP</a></li>
+        <li><a href="entrevistas.html">Entrevistas</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+       </ul>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  </header>
+  
+<main>
+  <div id="simulador">
     <h1 class="titulosim">Debate BP - Cronômetro</h1>
-
-    <button onclick="pickMotion()" class="sortear">Sortear Moção</button>
+    
+    <div onclick="pickMotion()" class="sortear div-button">Sortear Moção</div>
     <p id="motion"></p>
-    <h2 id="stage"></h2>
+    <h3 id="stage"></h3>
     <p id="timer" class="timer"></p>
     <div class="controls">
-        <button onclick="startStop()" id="startBtn">Iniciar</button>
-        <button onclick="reset()">Reiniciar</button>
-        <button onclick="skipStage()">Pular Tempo</button>
+        <div onclick="startStop()" id="startBtn" class="div-button">Iniciar</div>
+        <div onclick="reset()" class="div-button">Reiniciar</div>
+        <div onclick="skipStage()" class="div-button">Pular Tempo</div>
     </div>
+</div>
+
 
 
 </div>
+
+
+<footer>
+  <div class="footer-content">
+    <div class="boxpfooter">
+      <div class="traço-underline"></div>
+      <div class="texto-com-icones">
+        <h4 class="pfooter">Quer obter mais informações em tempo real<br>sobre o movimento de debates em Sergipe?</h4>
+          <div class="social-item">
+            <a href="https://instagram.com/ssdebates" target="_blank">
+              <img src="imagens/instagram-branco.png" alt="Instagram">
+            </a>
+            <span>Siga-nos no Instagram</span>
+          </div>
+          <div class="social-item">
+            <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/" target="_blank">
+              <img src="imagens/linkedin-branco.png" alt="Linkedin">
+            </a>
+            <span>Siga-nos no LinkedIn</span>
+          </div>
+          <div class="social-item">
+            <a href="https://www.youtube.com/@SociedadeSergipanadeDebates" target="_blank">
+              <img src="imagens/youtube-branco.png" alt="YouTube">
+            </a>
+            <span>Inscreva-se no YouTube</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-final"><img src="imagens/SSD-removebg-preview-rodape.png" alt="logo-ssd"></div>
+  </div>
+</footer>
+
+</main>
 <script src="script.js"></script>
 </body>
 </html>

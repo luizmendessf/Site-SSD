@@ -1,45 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Break - SSD</title>
+    <title>Calculadora de Break</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Simulador de Break</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sorteio.html">Sorteio de Moções</a></li>
-                <li><a href="simulador_break.html" class="active">Simulador de Break</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="simulador">
-            <h2>Informe os Dados do Torneio</h2>
-            <label for="num_equipes">Número de equipes:</label>
-            <input type="number" id="num_equipes" min="2" required>
-            
-            <label for="num_rodadas">Número de rodadas:</label>
-            <input type="number" id="num_rodadas" min="1" required>
-            
-            <label for="equipes_break">Equipes que irão breakar:</label>
-            <input type="number" id="equipes_break" min="1" required>
-            
-            <button onclick="calcularBreak()">Calcular Break</button>
-        </section>
 
-        <section id="resultado">
-            <h2>Resultados</h2>
-            <p id="melhor_cenario"></p>
-            <p id="pior_cenario"></p>
-        </section>
-    </main>
+
+    <header id="menu-fixo">
+        <a href="index.html"><img src="imagens/SSD-removebg-preview-menu.png" alt="Logo" class="logomenu"></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="conquistas.html">Conquistas</a></li>
+            <li><a href="Modelo.html">Modelo BP</a></li>
+            <li><a href="entrevistas.html">Entrevistas</a></li>
+            <li><a href="simulador.html">Simulador</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+           </ul>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     
+      </header>
+
+
+<main>
+    
+          <div id="calculadora">
+            <h1 class="titulo">Calculadora de Break</h1>
+    
+            <div>
+                <label for="numRodadas">Número de Rodadas:</label>
+                <input type="number" id="numRodadas" min="1" value="5">
+            </div>
+    
+            <div>
+                <label for="numDuplas">Número de Duplas:</label>
+                <input type="number" id="numDuplas" min="4" value="16">
+            </div>
+    
+            <div>
+                <label for="tipoTorneio">Tipo de Torneio:</label>
+                <select id="tipoTorneio">
+                    <option value="semifinal">Com Semi-Final (Top 8)</option>
+                    <option value="final">Apenas Final (Top 4)</option>
+                </select>
+            </div>
+    
+            <button onclick="calcularBreak()">Calcular Break</button>
+    
+            <div class="resultados">
+                <h2>Resultados</h2>
+                <p id="melhorCaso">Melhor caso: -</p>
+                <p id="piorCaso">Pior caso: -</p>
+            </div>
+        </div>
+
+
+<footer>
+    <div class="footer-content">
+      <div class="boxpfooter">
+        <div class="traço-underline"></div>
+        <div class="texto-com-icones">
+          <h4 class="pfooter">Quer obter mais informações em tempo real<br>sobre o movimento de debates em Sergipe?</h4>
+            <div class="social-item">
+              <a href="https://instagram.com/ssdebates" target="_blank">
+                <img src="imagens/instagram-branco.png" alt="Instagram">
+              </a>
+              <span>Siga-nos no Instagram</span>
+            </div>
+            <div class="social-item">
+              <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/" target="_blank">
+                <img src="imagens/linkedin-branco.png" alt="Linkedin">
+              </a>
+              <span>Siga-nos no LinkedIn</span>
+            </div>
+            <div class="social-item">
+              <a href="https://www.youtube.com/@SociedadeSergipanadeDebates" target="_blank">
+                <img src="imagens/youtube-branco.png" alt="YouTube">
+              </a>
+              <span>Inscreva-se no YouTube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-final"><img src="imagens/SSD-removebg-preview-menu.png" alt="logo-ssd"></div>
+    </div>
+  </footer>
+</main>
+
     <script src="script.js"></script>
 </body>
 </html>
