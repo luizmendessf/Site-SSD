@@ -592,11 +592,6 @@ nav ul li a:hover {
       padding: 20px;
     }
   
-    .textouniv {
-      background-color: rgba(0, 0, 0, 0.315);
-      padding: 15px;
-      border-radius: 10px;
-    }
   
     .puniv {
       font-size: 18px;
@@ -613,7 +608,7 @@ nav ul li a:hover {
 
   #Universidades {
     width: 80%;
-    background-image: url('imagens/aula-ssd-P.jpeg');
+    background-image: url('imagens/aula-ssd.jpeg');
     background-position: left left;
     background-size: cover;
     margin: 0 auto 10%;
@@ -626,9 +621,9 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
   }
-  @media (max-width: 468px) {
+  @media (max-width: 668px) {
     #Universidades{
-      background-image: url('imagens/aula-ssd-p.jpeg') !important;
+      background-image: url('imagens/aulau-ssd-p.jpeg') !important;
     }
   }
   .h1univ {
@@ -1198,7 +1193,7 @@ text-align: center;
   }
 
   .textouniv {
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.603);
     padding: 15px;
     border-radius: 10px;
   }
