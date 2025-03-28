@@ -767,13 +767,13 @@ h2 {
   text-align: center;
   margin-left: 35%;
   padding: 2%;
-  border: 2px solid rgba(0, 0, 0, 0.199);
+  border: 2px solid rgba(245, 245, 245, 0.523);
   border-radius: 25px;
   box-shadow: 3px 2px 10px 3px #00000038;
   position: absolute;
   left: 33%;
-  transform: translate(-50%, 15%);
-  background-color: rgba(78, 77, 77, 0.107);
+  transform: translate(-50%, 30%);
+  background-color: rgba(78, 77, 77, 0.55);
 }
     .posicao{
       text-align: justify;
@@ -801,7 +801,7 @@ h2 {
 .footer-content {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1312,10 +1312,24 @@ text-align: center;
 #simulador{
   width: 65%;
 }
+
+
+
+.imagembp {
+  background-size: cover;
+  background-position: top center;
 }
 
 
 
+.estrutura-debate {
+  width: 90%;
+}
+
+.estrutura-debateimg{
+  width: 70%;
+}
+}
 
 
 /* Ajustes para telas muito pequenas (menos de 480px) */
@@ -1343,6 +1357,11 @@ text-align: center;
     border: auto;
     margin: auto;
   }
+
+  .imagembp {
+    background-size: cover;
+    background-position: center center;
+}
 }
 
 
