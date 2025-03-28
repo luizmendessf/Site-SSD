@@ -528,6 +528,7 @@ nav ul li a:hover {
   align-items: center; /* Alinha verticalmente no centro */
   justify-content: center; /* Centraliza os elementos */
   gap: 5%; /* Espaço entre o texto e a imagem */
+  align-items: stretch;
 }
 
 .boxferr{
@@ -540,6 +541,16 @@ nav ul li a:hover {
   padding: 5px;
   background-color: #035aa607;
   margin-bottom: 15%;
+
+  flex: 1;               /* Ocupa espaço igualitário */
+  display: flex;         /* Flex interno para alinhar conteúdo */
+  flex-direction: column; /* Organiza itens em coluna */
+  min-height: 100%;      /* Garante que preencham a altura do container */
+}
+
+.pcenter{
+  flex-grow: 1;          /* Faz o texto ocupar todo espaço disponível */
+  margin-bottom: 20px;   /* Espaço consistente antes do botão */
 }
 
 .imgferr{
@@ -556,6 +567,10 @@ nav ul li a:hover {
   background-color: #035AA6;
   width: 50%;
   border-radius: 20px;
+  
+  margin: 0 25px 25px;   /* Margem inferior fixa */
+
+
   margin:  5% auto;
 }
 
@@ -608,7 +623,13 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
   }
-  
+  @media (max-width: 468px) {
+    #Universidades{
+      background-image: url('imagens/aulau-ssd-p.jpeg') !important;
+      background-attachment: scroll !important;
+      background-position: center center;
+    }
+  }
   .h1univ {
     font-size: 60px;
     color: white;
@@ -931,7 +952,7 @@ footer {
   margin: 5% auto 0 auto;
   padding: 40px 20px; /* Aumente o padding para evitar sobreposição */
   text-align: center;
-  background-image: url(imagens/img-unit.jpeg);
+  background-image: url('imagens/CDB-conq.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -954,7 +975,7 @@ footer {
 .missao-section h2::after {
   content: '';
   display: block;
-  width: 100px;
+  width: 100%;
   height: 4px;
   background: #035aa6ae;
   margin: 15px auto;
@@ -968,24 +989,26 @@ footer {
 .conq-container {
   display: flex;
   justify-content: center;
+  align-items: stretch; /* Mantém */
   gap: 30px;
   padding: 20px;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px; /* Limita a largura máxima */
-  position: relative;
-  z-index: 2; /* Garante que fique acima do background */
+  max-width: 1200px;
+  margin: 0 auto; /* Adicionado para centralizar */
 }
 
 .missao-item {
-  background: rgba(248, 249, 250, 0.85); /* Fundo semi-transparente */
+  background: rgba(248, 249, 250, 0.85);
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 20px;
+  flex: 1 1 300px; /* flex-grow | flex-shrink | flex-basis */
+  min-width: 280px; /* Largura mínima antes de quebrar */
+  max-width: 350px; /* Largura máxima */
+  display: flex; /* Novo */
+  flex-direction: column; /* Novo */
 }
 
 .missao-item:hover {
@@ -1163,7 +1186,8 @@ text-align: center;
     background-color: #035AA6;
     width: 70%;
     border-radius: 20px;
-    margin:  5% auto;
+    margin: 5% auto 5% auto;
+    margin-bottom: 5% !important;
   }
 
 
@@ -1260,10 +1284,10 @@ text-align: center;
 
     #nossa-missao{
       margin-top: 30%;
+      margin: auto;
     }
     .missao-container {
       flex-direction: column;
-      gap: 20px;
     }
     
     .missao-item {
@@ -1273,6 +1297,7 @@ text-align: center;
     .missao-section h2 {
       font-size: 2rem;
       margin-bottom: 30px;
+      margin-top: 15%;
     }
     
     .missao-item h3 {
@@ -1480,3 +1505,6 @@ nav ul li a {
   background-position: center center;
 }
 }
+
+
+
