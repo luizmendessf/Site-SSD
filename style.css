@@ -603,6 +603,9 @@ nav ul li a:hover {
       padding: 10px;
     }
   
+    .missao-item{
+      margin: auto;
+    }
     
   }
 
@@ -610,7 +613,7 @@ nav ul li a:hover {
 
   #Universidades {
     width: 80%;
-    background-image: url('imagens/aula-ssd.jpeg');
+    background-image: url('imagens/aula-ssd-P.jpeg');
     background-position: left left;
     background-size: cover;
     margin: 0 auto 10%;
@@ -625,7 +628,7 @@ nav ul li a:hover {
   }
   @media (max-width: 468px) {
     #Universidades{
-      background-image: url('imagens/aulau-ssd-p.jpeg') !important;
+      background-image: url('imagens/aula-ssd-p.jpeg') !important;
       background-attachment: scroll !important;
       background-position: center center;
     }
