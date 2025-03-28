@@ -775,9 +775,7 @@ h2 {
   transform: translate(-50%, 30%);
   background-color: rgba(78, 77, 77, 0.55);
 }
-    .posicao{
-      text-align: justify;
-    }
+
 .imagembp{
   background-image: url(imagens/WhatsApp\ Image\ 2025-03-25\ at\ 11.00.37.jpeg);
   background-position: left center;
@@ -789,9 +787,21 @@ h2 {
   background-attachment: fixed;
 }
 
+@media screen and (max-width: 768px) { 
+  .imagembp {
+      background-image: url(imagens/WhatsApp\ p\ Image\ 2025-03-25\ at\ 11.00.37.jpeg); /* Caminho da nova imagem */
+      background-attachment: scroll; /* Desativa o efeito parallax no mobile */
+  }
+}
+
+.posicao{
+  text-align: justify;
+}
 .pimg{
   color: white;
 }
+
+
  
 /*MODELO BP*/
 
@@ -1359,8 +1369,8 @@ text-align: center;
   }
 
   .imagembp {
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center;
 }
 }
 
