@@ -1504,6 +1504,12 @@ nav ul li a {
   background-attachment: scroll !important;
   background-position: center center;
 }
+
+.conq-section{
+  background-image: url('imagens/CDB-conq.jpeg') !important;
+  background-attachment: scroll !important;
+  background-position: center center;
+}
 }
 
 
