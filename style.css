@@ -1477,5 +1477,6 @@ nav ul li a {
 #Universidade{
   background-image: url('imagens/aulau-ssd-p.jpeg') !important;
   background-attachment: scroll !important;
+  background-position: center center;
 }
 }
