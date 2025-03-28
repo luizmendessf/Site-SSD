@@ -623,7 +623,9 @@ nav ul li a:hover {
   }
   @media (max-width: 668px) {
     #Universidades{
-      background-image: url('imagens/aulau-ssd-p.jpeg') !important;
+      background-image: url("imagens/aula-ssd-p.jpeg");
+      background-image: url('https://raw.githubusercontent.com/luizmendessf/imagens/aulau-ssd-P.jpeg') !important;
+
     }
   }
   .h1univ {
