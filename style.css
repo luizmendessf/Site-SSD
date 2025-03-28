@@ -792,11 +792,6 @@ h2 {
       background-image: url('imagens/clara-p.jpeg') !important;
       background-attachment: scroll !important;
   }
-
-  #Universidade{
-    background-image: url('imagens/aulau-ssd-p.jpeg') !important;
-    background-attachment: scroll !important;
-  }
 }
 
 
@@ -1475,5 +1470,12 @@ nav ul li a {
 
 .menu-toggle {
   display: block;
+}
+
+
+
+#Universidade{
+  background-image: url('imagens/aulau-ssd-p.jpeg') !important;
+  background-attachment: scroll !important;
 }
 }
