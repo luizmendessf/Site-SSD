@@ -623,6 +623,7 @@ nav ul li a:hover {
   }
   @media (max-width: 668px) {
     #Universidades{
+      background-image: url("imagens/aulau-ssd-P.jpeg");
       background-image: url("imagens/aula-ssd-p.jpeg");
 
     }
