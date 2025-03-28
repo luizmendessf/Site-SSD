@@ -629,8 +629,6 @@ nav ul li a:hover {
   @media (max-width: 468px) {
     #Universidades{
       background-image: url('imagens/aula-ssd-p.jpeg') !important;
-      background-attachment: scroll !important;
-      background-position: center center;
     }
   }
   .h1univ {
@@ -1286,8 +1284,7 @@ text-align: center;
 
 
     #nossa-missao{
-      margin-top: 30%;
-      margin: auto;
+      margin: 20% auto auto auto;
     }
     .missao-container {
       flex-direction: column;
