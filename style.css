@@ -777,7 +777,7 @@ h2 {
 }
 
 .imagembp{
-  background-image: url(imagens/WhatsApp\ Image\ 2025-03-25\ at\ 11.00.37.jpeg);
+  background-image: url('imagens/clara.jpeg');
   background-position: left center;
   background-repeat: no-repeat;
   box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.354);
@@ -788,11 +788,12 @@ h2 {
 }
 
 @media screen and (max-width: 768px) { 
-  .imagembp {
-      background-image: url(imagens/WhatsApp\ p\ Image\ 2025-03-25\ at\ 11.00.37.jpeg); /* Caminho da nova imagem */
-      background-attachment: scroll; /* Desativa o efeito parallax no mobile */
+  section.imagembp {
+      background-image: url('imagens/clara-p.jpeg') !important;
+      background-attachment: scroll !important;
   }
 }
+
 
 .posicao{
   text-align: justify;
