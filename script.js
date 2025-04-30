@@ -155,7 +155,11 @@ let timeLeft = stages[0].time;
 let isRunning = false;
 let timerInterval;
 
+let pieChart;
+let barChart;
+
 document.addEventListener("DOMContentLoaded", () => {
+    setupCharts();
     updateUI();
 });
 
@@ -167,6 +171,7 @@ function pickMotion() {
 function updateUI() {
     document.getElementById("stage").innerText = stages[stageIndex].name;
     document.getElementById("timer").innerText = formatTime(timeLeft);
+    updateCharts();
 }
 
 function formatTime(seconds) {
@@ -220,6 +225,74 @@ function reset() {
     document.getElementById("startBtn").innerText = "Iniciar";
     updateUI();
 }
+
+// === GRÁFICOS ===
+
+function setupCharts() {
+    const pieCtx = document.getElementById("pieChart").getContext("2d");
+    pieChart = new Chart(pieCtx, {
+        type: "pie",
+        data: {
+            labels: ["Tempo restante", "Tempo decorrido"],
+            datasets: [{
+                data: [timeLeft, stages[stageIndex].time - timeLeft],
+                backgroundColor: ["#36A2EB", "#FF6384"]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const barCtx = document.getElementById("barChart").getContext("2d");
+    barChart = new Chart(barCtx, {
+        type: "bar",
+        data: {
+            labels: stages.map(s => s.name),
+            datasets: [{
+                label: "Duração (minutos)",
+                data: stages.map(s => s.time / 60),
+                backgroundColor: "#4BC0C0"
+            }]
+        },
+        options: {
+            responsive: true,
+            indexAxis: "y"
+        }
+    });
+}
+
+function updateCharts() {
+    if (!pieChart) return;
+
+    pieChart.data.datasets[0].data = [
+        timeLeft,
+        stages[stageIndex].time - timeLeft
+    ];
+    pieChart.update();
+}
+
+
+function setRingProgress(percent) {
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+  
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    const offset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+  }
+  
+  // Exemplo de uso: atualize a cada segundo
+  function updateTimerDisplay(timeRemaining, totalTime) {
+    const percent = (timeRemaining / totalTime) * 100;
+    setRingProgress(percent);
+  
+    const minutes = String(Math.floor(timeRemaining / 60)).padStart(2, '0');
+    const seconds = String(timeRemaining % 60).padStart(2, '0');
+    document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+  }
+  
 
 
 

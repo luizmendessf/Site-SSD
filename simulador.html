@@ -24,58 +24,59 @@
 
   </header>
   
-<main>
-  <div id="simulador">
-    <h1 class="titulosim">Debate BP - Cronômetro</h1>
-    
-    <div onclick="pickMotion()" class="sortear div-button">Sortear Moção</div>
-    <p id="motion"></p>
-    <h3 id="stage"></h3>
-    <p id="timer" class="timer"></p>
-    <div class="controls">
+  <main>
+    <div id="simulador">
+      <h1 class="titulosim">Debate BP - Cronômetro</h1>
+
+      <div onclick="pickMotion()" class="sortear div-button">Sortear Moção</div>
+      <p id="motion"></p>
+      <h3 id="stage"></h3>
+
+      <div class="circle-timer">
+        <svg class="progress-ring" width="180" height="180">
+          <circle class="progress-ring__background" stroke="#e6e6e6" stroke-width="12" fill="transparent" r="80" cx="90" cy="90"/>
+          <circle class="progress-ring__circle" stroke="#035AA6" stroke-width="12" fill="transparent" r="80" cx="90" cy="90"/>
+        </svg>
+        <div class="circle-label" id="timer">07:00</div>
+      </div>
+
+      <div class="controls">
         <div onclick="startStop()" id="startBtn" class="div-button">Iniciar</div>
         <div onclick="reset()" class="div-button">Reiniciar</div>
         <div onclick="skipStage()" class="div-button">Pular Tempo</div>
-    </div>
-</div>
-
-
-
-</div>
-
-
-<footer>
-  <div class="footer-content">
-    <div class="boxpfooter">
-      <div class="traço-underline"></div>
-      <div class="texto-com-icones">
-        <h4 class="pfooter">Quer obter mais informações em tempo real<br>sobre o movimento de debates em Sergipe?</h4>
-          <div class="social-item">
-            <a href="https://instagram.com/ssdebates" target="_blank">
-              <img src="imagens/instagram-branco.png" alt="Instagram">
-            </a>
-            <span>Siga-nos no Instagram</span>
-          </div>
-          <div class="social-item">
-            <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/" target="_blank">
-              <img src="imagens/linkedin-branco.png" alt="Linkedin">
-            </a>
-            <span>Siga-nos no LinkedIn</span>
-          </div>
-          <div class="social-item">
-            <a href="https://www.youtube.com/@SociedadeSergipanadeDebates" target="_blank">
-              <img src="imagens/youtube-branco.png" alt="YouTube">
-            </a>
-            <span>Inscreva-se no YouTube</span>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="logo-final"><img src="imagens/SSD-removebg-preview-rodape.png" alt="logo-ssd"></div>
-  </div>
-</footer>
 
-</main>
-<script src="script.js"></script>
+    <footer>
+      <div class="footer-content">
+        <div class="boxpfooter">
+          <div class="traço-underline"></div>
+          <div class="texto-com-icones">
+            <h4 class="pfooter">Quer obter mais informações em tempo real<br>sobre o movimento de debates em Sergipe?</h4>
+            <div class="social-item">
+              <a href="https://instagram.com/ssdebates" target="_blank">
+                <img src="imagens/instagram-branco.png" alt="Instagram">
+              </a>
+              <span>Siga-nos no Instagram</span>
+            </div>
+            <div class="social-item">
+              <a href="https://www.linkedin.com/company/sociedade-sergipana-de-debates/" target="_blank">
+                <img src="imagens/linkedin-branco.png" alt="Linkedin">
+              </a>
+              <span>Siga-nos no LinkedIn</span>
+            </div>
+            <div class="social-item">
+              <a href="https://www.youtube.com/@SociedadeSergipanadeDebates" target="_blank">
+                <img src="imagens/youtube-branco.png" alt="YouTube">
+              </a>
+              <span>Inscreva-se no YouTube</span>
+            </div>
+          </div>
+        </div>
+        <div class="logo-final"><img src="imagens/SSD-removebg-preview-rodape.png" alt="logo-ssd"></div>
+      </div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

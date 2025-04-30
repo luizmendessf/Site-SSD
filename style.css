@@ -84,65 +84,114 @@ input, select {
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-#simulador{
-  margin: 15% auto 5% auto;
-  text-align: center;
-  border-style: solid;
-  border-color: #035AA6;
-  border-width: 2px;
-  border-radius: 20px;
-  width: 40%;
-  box-shadow: 3px 3px 3px 0px #00000036;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f8fb;
+  margin: 0;
+  padding: 0;
 }
-/* Estilo comum para as divs que são botões */
+
+#simulador {
+  margin: 8% auto 5% auto;
+  text-align: center;
+  border: 2px solid #035AA6;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#simulador:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos botões */
 .div-button {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #035AA6;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #035AA6, #0483d8);
   color: white;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
-  margin-left: 1%;
-  margin-bottom: 5%;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  margin: 10px 8px;
+  border: none;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 .div-button:hover {
-  background-color: #035AA6;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0275c2, #0496f0);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(3, 90, 166, 0.4);
 }
 
-/* Efeito de clique */
 .div-button:active {
-  background-color: #035aa6a2;
-  transform: scale(0.98);
+  transform: scale(0.97);
+  background: #035aa6d0;
 }
 
-/* Definindo um estilo para os botões da classe "controls" */
+/* Área dos botões */
 .controls {
   margin: 2% auto;
 }
 
-#stage{
-  margin-top: 2%;
-}
-
-/* Adicionando o estilo do título */
-.titulosim {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 5% auto;
-}
-
-/* Estilo para o cronômetro */
+/* Cronômetro estilizado */
 .timer {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 42px;
+  font-weight: 700;
+  color: #035AA6;
+  margin-top: 20px;
+  letter-spacing: 1px;
 }
+
+/* Título estilizado */
+.titulosim {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #035AA6;
+}
+
+#stage {
+  margin-top: 3%;
+}
+.circle-timer {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring__background,
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(0.25turn);
+  transform-origin: center;
+  stroke-linecap: round;
+}
+
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #035AA6;
+}
+
 
 
 *{
@@ -173,6 +222,10 @@ input, select {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Garante que o body ocupe pelo menos toda a altura da viewport */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+
 }
 
 
@@ -196,103 +249,13 @@ input, select {
   z-index: 1000;
   background-color: #035AA6;
   padding: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-/* Alterações para telas menores */
-/* Reiniciar margens e paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  overflow-x: hidden;
-}
-
-/* Menu fixo para telas maiores */
-#menu-fixo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #035AA6;
-  padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#menu-fixo .logomenu {
-  width: 100px; /* Ajuste o tamanho da logo conforme necessário */
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-}
-
-/* Alterações para telas menores */
-/* MENU FIXO - Alinhamento original */
-#menu-fixo {
-  width: 100%;
-  background-color: #035AA6;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between; /* Alinhamento original */
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-
-.logomenu {
-  width: 80px;
-  height: auto;
-  margin-left: 0; /* Remove margem anterior */
-}
-
-/* Navegação alinhada à direita */
 nav {
   display: flex;
   justify-content: flex-end; /* Itens à direita */
+  width: 100%;
 }
 
 nav ul {
@@ -302,6 +265,32 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
+nav ul li {
+  margin: 0 15px;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+#menu-fixo .logomenu {
+  width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+}
+
+
+
+.logomenu {
+  width: 80px;
+  height: auto;
+  margin-left: 0; /* Remove margem anterior */
+}
+
+
+
 
 nav ul li a {
   color: white;
@@ -392,7 +381,7 @@ nav ul li a:hover {
   
 
   #logo{
-    margin: 16% auto 0 auto;
+    margin: 10% auto 0 auto;
     text-align: center;
   }
   
@@ -490,12 +479,10 @@ nav ul li a:hover {
   
   /* Responsividade: Quando a tela for pequena, muda para coluna */
   @media (max-width: 768px) {
+
     .hero {
       flex-direction: column; /* Empilha os elementos */
       text-align: center;
-    }
-
-    .hero {
       width: 90%;
       margin: 3% auto 10% auto;
       display: flex;
@@ -511,10 +498,7 @@ nav ul li a:hover {
       width: 95%;
       margin: auto 5%;
     }
-  
-    .texto-assd {
-      text-align: center;
-    }
+
   }
   
 #ferramentas{
@@ -584,8 +568,8 @@ nav ul li a:hover {
       width: 70%;
       border-radius: 20px;
       margin:  5% auto;
+      margin-bottom: 5% !important;
     }
-
 
     #Universidades {
       height: auto;
@@ -1040,7 +1024,6 @@ footer {
 font-size: 42px;
 text-align: center;
 }
-
 /*CONQUISTAS*/
 
 
@@ -1171,22 +1154,12 @@ text-align: center;
     font-size: 40px;
   }
 
-  .puniv {
-    font-size: 18px;
-    text-align: center;
-    width: 95%;
-  }
 
 
 
 
-  .botao-ferr{
-    background-color: #035AA6;
-    width: 70%;
-    border-radius: 20px;
-    margin: 5% auto 5% auto;
-    margin-bottom: 5% !important;
-  }
+
+
 
 
   #Universidades {
@@ -1204,9 +1177,6 @@ text-align: center;
     font-size: 18px;
     padding: 10px;
   }
-
-
-
 
 
 
@@ -1407,9 +1377,6 @@ text-align: center;
   flex: 1; 
 }
 
-.botao-ferr{
-  width: 80%;
-}
 
 }
 
@@ -1424,40 +1391,9 @@ text-align: center;
   padding: 10px 15px;
 }
 
-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #035AA6;
-  padding: 10px 0;
-}
-
-nav.active {
-  display: block;
-}
-
-nav ul {
-  flex-direction: column;
-  gap: 5px;
-  align-items: center; /* Centraliza apenas no mobile */
-}
-
-nav ul li {
-  width: 100%;
-  text-align: center;
-}
-
 nav ul li a {
   display: block;
   padding: 10px;
-}
-
-.menu-toggle {
-  display: block;
-}  #menu-fixo {
-  padding: 10px 15px;
 }
 
 nav {
@@ -1485,20 +1421,7 @@ nav ul li {
   text-align: center;
 }
 
-nav ul li a {
-  display: block;
-  padding: 10px;
-}
-
 .menu-toggle {
   display: block;
 }
-
-
-
-
-
 }
-
-
-
