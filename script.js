@@ -132,10 +132,7 @@ const motions = [
         "motion": "EC legalizaria o casamento entre pessoas do mesmo sexo em todos os países.",
         "infoslide": "O casamento entre pessoas do mesmo sexo é uma questão de direitos civis, mas enfrenta resistência devido a valores culturais e religiosos em algumas regiões."
     },
-    {
-        "motion": "EC tornaria a experiência de voluntariado obrigatória para todos os estudantes.",
-        "infoslide": "A experiência de voluntariado pode ajudar no desenvolvimento pessoal e social dos jovens, mas a obrigatoriedade pode tornar a experiência menos significativa."
-    }
+
 ];
 
 const stages = [
