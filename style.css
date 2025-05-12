@@ -740,7 +740,7 @@ h2 {
 .pdf-container {
   width: 90%; /* Mais largo para caber na tela */
   max-width: 900px; /* Limita a largura máxima em telas grandes */
-  margin: 8% auto 0% auto;
+  margin: 12% auto 0% auto;
   padding: 25px; /* Aumenta o padding interno */
   border: 2px solid rgba(0, 0, 0, 0.199);
   border-radius: 25px;
